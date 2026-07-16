@@ -404,6 +404,16 @@ section{
     color:#32b3ff;
 }
 
+@media (max-width:768px){
+
+    .inti-card{
+        width:100%;
+        max-width:340px;
+        margin:auto;
+    }
+
+}
+
 /* ============================= */
 /* ANGGOTA */
 /* ============================= */
@@ -650,6 +660,22 @@ font-size:18px;
     padding:22px;      /* Sebelumnya 35px */
     border-radius:18px;
     min-height:150px;  /* Tinggi card diperkecil */
+}
+
+@media (max-width:768px){
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .info-card{
+        width:100%;
+    }
+
+    .maps iframe{
+        height:280px;
+    }
+
 }
 
 .info-card{
@@ -1090,7 +1116,8 @@ height:280px;
 
 
 .org-line{
-    width:1300px;
+    width:100%;
+    max-width:1300px;
     height:4px;
     margin:45px auto;
     position:relative;
@@ -1400,4 +1427,125 @@ transform:rotate(360deg);
     color:white;
     font-size:45px;
     cursor:pointer;
+}
+
+/* ============================
+   MOBILE RESPONSIVE
+=============================*/
+@media screen and (max-width:768px){
+
+body{
+    overflow-x:hidden;
+}
+
+/* Navbar */
+
+.navbar{
+    padding:15px;
+}
+
+.logo h2{
+    font-size:24px;
+}
+
+.navbar ul{
+    display:none;
+}
+
+.menu{
+    display:block;
+}
+
+/* Hero */
+
+.hero{
+    flex-direction:column-reverse;
+    gap:40px;
+    text-align:center;
+}
+
+.hero-image img{
+    width:220px;
+}
+
+.hero-text h1{
+    font-size:38px;
+}
+
+.hero-text p{
+    font-size:16px;
+    line-height:28px;
+}
+
+/* Pengurus */
+
+.inti{
+    flex-direction:column;
+    align-items:center;
+}
+
+.inti-card{
+    width:100%;
+    max-width:340px;
+}
+
+.member-card{
+    width:100%;
+}
+
+.member-card img,
+.inti-card img{
+    height:320px;
+}
+
+/* Garis */
+
+.org-line{
+    width:100%;
+}
+
+/* Gallery */
+
+.gallery-grid{
+    grid-template-columns:1fr;
+}
+
+/* Contact */
+
+.contact-grid{
+    grid-template-columns:1fr;
+}
+
+.info-card{
+    width:100%;
+}
+
+.maps iframe{
+    height:260px;
+}
+
+/* Judul */
+
+.section-title h2,
+.title h2,
+.periode-title{
+    font-size:30px;
+}
+
+}
+
+@media (max-width:768px){
+
+.hero{
+    gap:40px;
+}
+
+.hero-image img{
+    width:230px;
+}
+
+.logo h2{
+    font-size:22px;
+}
+
 }
