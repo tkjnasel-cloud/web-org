@@ -1,1693 +1,981 @@
-/* ============================= */
-/* GOOGLE FONT */
-/* ============================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap');
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-    font-family:'Manrope',sans-serif;
-}
-
-body{
-    background:#050816;
-    color:#fff;
-    overflow-x:hidden;
-    font-family:"Manrope",sans-serif;
-}
-
-a{
-    text-decoration:none;
-    color:white;
-}
-
-ul{
-    list-style:none;
-}
-
-img{
-    width:100%;
-    display:block;
-}
-
-/* ============================= */
-/* NAVBAR */
-/* ============================= */
-
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:999;
-    background:rgba(5,8,22,.8);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.navbar{
-    width:90%;
-    max-width:1300px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 0;
-    font-family:"Plus Jakarta Sans",sans-serif;
-    font-weight:600;
-    letter-spacing:.5px;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.logo img{
-    width:55px;
-}
-
-.logo h2{
-    color:#fff;
-    font-family:"Sora",sans-serif;
-    font-size:34px;
-    font-weight:800;
-    letter-spacing:-1px;
-    text-transform:uppercase;
-}
-
-.navbar ul{
-    display:flex;
-    gap:35px;
-}
-
-.navbar ul li a{
-    font-size:17px;
-    font-weight:600;
-    transition:.3s;
-    position:relative;
-}
-
-.navbar ul li a::after{
-    content:'';
-    position:absolute;
-    left:0;
-    bottom:-8px;
-    width:0%;
-    height:2px;
-    border-radius:20px;
-    background:#60A5FA;
-    transition:.3s;
-}
-
-.navbar ul li a:hover::after{
-    width:100%;
-}
-
-.navbar ul li a:hover{
-    color:#3fa9ff;
-}
-
-.menu{
-    display:none;
-    font-size:28px;
-    cursor:pointer;
-}
-
-/* ============================= */
-/* HERO */
-/* ============================= */
-
-.hero{
-    position:relative;
-    min-height:100vh;
-    width:90%;
-    max-width:1300px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:100px;
-    overflow:hidden;
-
-    background:
-    radial-gradient(circle at 15% 20%, rgba(0,153,255,.18), transparent 35%),
-    radial-gradient(circle at 85% 70%, rgba(0,153,255,.15), transparent 35%);
-
-    background-image:
-    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
-
-    background-size:50px 50px;
-    padding-top:120px;
-    padding-bottom:70px;
-}
-
-.hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-
-    background-image:
-    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
-
-    background-size:50px 50px;
-
-    pointer-events:none;
-}
-
-.hero-text{
-    flex:1;
-}
-
-.hero-text span{
-    color:#43b4ff;
-    font-weight:700;
-    font-family:"Plus Jakarta Sans",sans-serif;
-    letter-spacing:3px;
-}
-
-.hero-text h1{
-    font-family:"Sora",sans-serif;
-    font-size:80px;
-    font-weight:800;
-    line-height:.9;
-    letter-spacing:-5px;
-    margin:20px 0 30px;
-}
-
-.hero-text h1 span{
-    background:linear-gradient(135deg,#7DD3FC,#3B82F6);
-    -webkit-background-clip:text;
-    color:transparent;
-}
-
-.hero-text p{
-    color:#cfd8e6;
-    font-size:20px;
-    line-height:38px;
-    max-width:620px;
-    margin-bottom:45px;
-}
-
-.btn{
-    display:inline-flex;
-    align-items:center;
-    gap:12px;
-
-    padding:18px 44px;
-
-    border-radius:999px;
-
-    background:linear-gradient(135deg,#4F8CFF,#2563EB);
-
-    font-weight:700;
-
-    box-shadow:0 15px 35px rgba(37,99,235,.35);
-
-    transition:.35s;
-}
-
-.btn:hover{
-    transform:translateY(-6px);
-    box-shadow:0 20px 45px rgba(37,99,235,.45);
-}
-
-.hero-image{
-    flex:1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.hero-image img{
-    width:430px;
-    border-radius:24px;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    transition:.45s;
-
-    box-shadow:
-    0 25px 60px rgba(0,0,0,.45);
-}
-
-.hero-image img:hover{
-    transform:translateY(-8px) scale(1.02);
-}
-
-
-/* ============================= */
-/* SECTION UMUM */
-/* ============================= */
-
-section{
-    padding:100px 8%;
-}
-
-.title{
-    text-align:center;
-    margin-bottom:60px;
-}
-
-.title h2{
-    font-size:42px;
-    color:#4cb8ff;
-    margin-bottom:10px;
-}
-
-.title p{
-    color:#b7c5dd;
-    font-size:17px;
-}
-
-/*=========================
-    TENTANG ORGANISASI
-==========================*/
-
-.about{
-    position: relative;
-    padding:120px 8%;
-    background:linear-gradient(180deg,#08111f,#0d1828,#08111f);
-    overflow:hidden;
-}
-
-/* Glow Background */
-.about::before{
-    content:"";
-    position:absolute;
-    width:450px;
-    height:450px;
-    background:#1ea5ff;
-    filter:blur(180px);
-    opacity:.12;
-    top:-120px;
-    left:-100px;
-}
-
-.about::after{
-    content:"";
-    position:absolute;
-    width:350px;
-    height:350px;
-    background:#008cff;
-    filter:blur(170px);
-    opacity:.12;
-    bottom:-120px;
-    right:-100px;
-}
-
-/*=========================
-        JUDUL
-==========================*/
-
-.section-title{
-    text-align:center;
-    margin-bottom:70px;
-}
-
-.section-title h2{
-    font-size:56px;
-    font-weight:800;
-    background:linear-gradient(90deg,#ffffff,#ffffff);
-    -webkit-background-clip:text;
-    color:transparent;
-}
-
-.section-title p{
-    color:#c9d8e7;
-    font-size:18px;
-    margin-top:15px;
-}
-
-.section-title::after{
-    content:"";
-    display:block;
-    width:120px;
-    height:5px;
-    margin:25px auto 0;
-    border-radius:50px;
-    background:linear-gradient(to right,#00c6ff,#0072ff);
-}
-
-/*=========================
-        CARD
-==========================*/
-
-.about-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:35px;
-}
-
-.about-card{
-    background:rgba(255,255,255,.04);
-    border:1px solid rgba(255,255,255,.08);
-    backdrop-filter:blur(18px);
-    border-radius:20px;
-    padding:35px;
-    transition:.35s;
-    position:relative;
-    overflow:hidden;
-}
-
-.about-card::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:-100%;
-    width:100%;
-    height:4px;
-    background:linear-gradient(90deg,#00d9ff,#007bff);
-    transition:.5s;
-}
-
-.about-card:hover::before{
-    left:0;
-}
-
-.about-card:hover{
-    transform:translateY(-10px);
-    border-color:#3ea9ff;
-    box-shadow:0 20px 50px rgba(0,140,255,.25);
-}
-
-.about-card h3{
-    font-size:34px;
-    color:#45b0ff;
-    margin-bottom:20px;
-}
-
-.about-card p{
-    color:#dbe7f5;
-    line-height:1.9;
-    font-size:17px;
-}
-
-.about-card ul{
-    margin-top:15px;
-    padding-left:20px;
-}
-
-.about-card li{
-    color:#dbe7f5;
-    margin:12px 0;
-    line-height:1.8;
-}
-
-.about-card li::marker{
-    color:#32b3ff;
-}
+<!DOCTYPE html>
+<html lang="id">
 
-@media (max-width:768px){
+<head>
 
-    .inti-card{
-        width:100%;
-        max-width:340px;
-        margin:auto;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-}
+<title>Website Organisasi</title>
 
-/* ============================= */
-/* ANGGOTA */
-/* ============================= */
+<link rel="stylesheet" href="style.css">
 
-.anggota{
-    background:#050816;
-}
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-.anggotaSwiper{
-    padding:25px 5px 80px;
-}
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-.member-card{
+<!-- Swiper CSS -->
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-    background:rgba(255,255,255,.06);
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    backdrop-filter:blur(20px);
+</head>
 
-    border:1px solid rgba(255,255,255,.08);
+<body>
 
-    border-radius:22px;
+<!--================ NAVBAR =================-->
 
-    overflow:hidden;
+<header>
 
-    transition:.35s;
-}
+<nav class="navbar">
 
-.member-card:hover{
+<div class="logo">
 
-    transform:translateY(-12px);
+<img src="img/logo.jpeg">
 
-    box-shadow:0 0 35px rgba(55,155,255,.35);
+<h2>METRO CREW</h2>
 
-}
+</div>
 
-.member-card img{
+<ul>
 
-    width:100%;
+<li><a href="#home">Beranda</a></li>
 
-    height:380px;
+<li><a href="#tentang">Tentang</a></li>
 
-    object-fit:cover;
+<li><a href="#anggota">Anggota</a></li>
 
-}
+<li><a href="#galeri">Galeri</a></li>
 
-.member-info{
+<li><a href="#kontak">Kontak</a></li>
 
-    padding:25px;
+</ul>
 
-}
+<div class="menu">
 
-.member-info h3{
+<i class="fa-solid fa-bars"></i>
 
-    font-size:24px;
+</div>
 
-    margin-bottom:8px;
+</nav>
 
-}
+</header>
 
-.member-info p{
+<!--================ HERO =================-->
 
-    color:#57b6ff;
+<section class="hero" id="home">
 
-    margin-bottom:18px;
+<div class="hero-text">
 
-    font-weight:600;
+<span>SELAMAT DATANG DI</span>
 
-}
+<h1>
+WEBSITE
+<br>
+<span>KOMUNITAS IT M3M</span>
+</h1>
 
-.member-info a{
+<p>
 
-    display:inline-flex;
+Tempat berkembang,
+berkolaborasi,
+serta membangun karakter
+menuju generasi yang kreatif,
+aktif,
+dan berprestasi dalam teknologi untuk masa yang akan datang.
 
-    align-items:center;
-
-    gap:10px;
-
-    color:#fff;
-
-    transition:.3s;
-
-}
-
-.member-info a:hover{
-
-    color:#4cb8ff;
-
-}
-
-.member-info i{
-
-    font-size:20px;
-
-}
-
-/* ============================= */
-/* SWIPER */
-/* ============================= */
-
-.swiper-button-next,
-.swiper-button-prev{
-
-    color:#4cb8ff !important;
-
-}
-
-.swiper-pagination-bullet{
-
-    background:#ffffff !important;
-
-    opacity:.5;
-
-}
-
-.swiper-pagination-bullet-active{
+</p>
 
-    background:#4cb8ff !important;
+<a href="#anggota" class="btn">
 
-    opacity:1;
+Lihat Struktur
 
-}
-/* ================================= */
-/* GALERI */
-/* ================================= */
+<i class="fa-solid fa-arrow-down"></i>
 
-.galeri{
-    padding:100px 8%;
-    background:#0b1120;
-    text-align: center;
-    font-size:28px;
-    font-weight:700;
-}
+</a>
 
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
-    margin-top:60px;
-}
+</div>
 
-.gallery-item{
-    position:relative;
-    overflow:hidden;
-    border-radius:22px;
-    cursor:pointer;
-    border:2px solid rgba(255,255,255,.08);
-    transition:.4s;
-}
+<div class="hero-image">
 
-.gallery-item img{
-    width:100%;
-    height:280px;
-    object-fit:cover;
-    display:block;
-    transition:.5s;
-}
+<img src="img/logo.jpeg">
 
-.gallery-item::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(to top,
-    rgba(0,0,0,.65),
-    transparent 60%);
-    opacity:0;
-    transition:.4s;
-}
+</div>
 
-.gallery-item::after{
-    content:"Lihat Foto";
-    position:absolute;
-    bottom:20px;
-    left:50%;
-    transform:translateX(-50%);
-    color:white;
-    font-size:18px;
-    font-weight:600;
-    opacity:0;
-    transition:.4s;
-}
+</section>
 
-.gallery-item:hover img{
-    transform:scale(1.1);
-}
+<!--================ TENTANG =================-->
 
-.gallery-item:hover::before,
-.gallery-item:hover::after{
-    opacity:1;
-}
+<section class="about" id="tentang">
 
-.gallery-item:hover{
-    box-shadow:0 15px 35px rgba(0,170,255,.35);
-    border-color:#2ea8ff;
-}
+    <div class="section-title">
+        <h2>Tentang Komunitas</h2>
+        <p>Mengenal lebih dekat komunitas kami.</p>
+    </div>
 
-/* ================================= */
-/* KONTAK */
-/* ================================= */
+    <div class="about-container">
 
-.kontak{
+        <div class="about-card">
+            <h3>Profil</h3>
+            <p>
+                Metro Crew merupakan komunitas pecinta teknologi untuk 
+            </p>
+        </div>
 
-padding:100px 8%;
-background:linear-gradient(135deg,#0f172a,#111827,#0b1120);
+        <div class="about-card">
+            <h3>Visi</h3>
+            <p>
+                Menjadi komunitas yang mewadahi siswa untuk belajar, berkembang, dan berinovasi di bidang IT.
+            </p>
+        </div>
 
-}
+        <div class="about-card">
+            <h3>Misi</h3>
 
-.kontak h2{
+            <ul>
+                <li>Mewadahi anggota untuk belajar dan berbagi ilmu IT.</li>
+                <li>Mengembangkan keterampilan melalui praktik dan kolaborasi.</li>
+                <li>Mengikuti perkembangan teknologi dan menerapkannya dalam pembelajaran.</li>
+                <li>Menciptakan lingkungan yang mendukung pertumbuhan dan kreativitas anggota.</li>
+            </ul>
 
-text-align:center;
-font-size:45px;
-font-weight:800;
+        </div>
 
-background:linear-gradient(90deg,#38bdf8,#2563eb);
+    </div>
 
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+</section>
 
-margin-bottom:15px;
+<!--================ ANGGOTA =================-->
 
-}
+<section class="anggota" id="anggota">
 
-.kontak>p{
+<div class="title">
 
-text-align:center;
-color:#b8c5d6;
+    <span class="subtitle">
+        ✦ COMUNITY TEAM ✦
+    </span>
 
-max-width:700px;
+    <h2>Struktur Komunitas</h2>
+    <div class="title-line"></div>
+    <p>
+        Kenali seluruh pengurus komunitas dan anggota, karena setiap anggota memiliki peran penting dalam membangun komunitas yang
+        aktif, solid, dan penuh inovasi.
+    </p>
+    <div class="org-stats">
 
-margin:auto auto 60px;
+    <div class="stat-box">
+        <h3>20+</h3>
+        <span>Anggota Aktif</span>
+    </div>
 
-font-size:18px;
+    <div class="stat-box">
+        <h3>2012</h3>
+        <span>Tahun Berdiri</span>
+    </div>
 
-}
+    <div class="stat-box">
+        <h3>12+</h3>
+        <span>Kegiatan</span>
+    </div>
 
-.contact-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;          /* Jarak antar card lebih kecil */
-    max-width:1000px;  /* Biar tidak terlalu lebar */
-    margin:40px auto;
-}
+</div>
+</div>
+    <p class="periode-text">
+    Susunan kepengurusan Metro Crew
+    </p>
+    <!-- ========================= -->
+    <!-- PERIODE 2025 / 2026 -->
+    <!-- ========================= -->
 
-.contact-card{
-    padding:22px;      /* Sebelumnya 35px */
-    border-radius:18px;
-    min-height:150px;  /* Tinggi card diperkecil */
-}
+    <div class="periode">
 
-@media (max-width:768px){
+        <h2 class="periode-title">
+            PERIODE 2025 / 2026
+        </h2>
 
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
+        <!-- Ketua -->
 
-    .info-card{
-        width:100%;
-    }
+        <div class="ketua-box">
 
-    .maps iframe{
-        height:280px;
-    }
+            <div class="inti-card">
 
-}
+                <img src="img/ty.jpeg">
 
-.info-card{
+                <div class="member-info">
 
-display:flex;
+                    <h3>Tian Ananda Sutrisno</h3>
 
-gap:20px;
+                    <p>Ketua</p>
 
-padding:28px;
+                    <p class="motto">
+                        "Be kindness."
+                    </p>
 
-border-radius:22px;
+                    <a href="https://instagram.com/yanannda" target="_blank">
 
-background:rgba(255,255,255,.05);
+                        <i class="fab fa-instagram"></i>
 
-backdrop-filter:blur(20px);
+                        @yanannda
 
-border:1px solid rgba(255,255,255,.08);
+                    </a>
 
-transition:.4s;
+                </div>
 
-position:relative;
+            </div>
 
-overflow:hidden;
+        </div>
 
-}
+        <!-- Pengurus Inti -->
 
-.info-card::before{
+        <div class="inti">
 
-content:"";
+            <!-- Sekretaris -->
 
-position:absolute;
+            <div class="inti-card">
 
-top:0;
+                <img src="img/15.jpeg">
 
-left:-100%;
+                <div class="member-info">
 
-width:100%;
+                    <h3>Kuma Ratih Fanny Desta Nurul Dzihni</h3>
 
-height:100%;
+                    <p>Sekretaris</p>
+                    <p class="motto">
+                        "Memimpin bukan tentang menjadi yang paling hebat,
+                        tetapi membuat semua orang menjadi lebih hebat."
+                    </p>
 
-background:linear-gradient(
-90deg,
-transparent,
-rgba(255,255,255,.08),
-transparent);
+                    <a href="https://instagram.com/xynn_fanny" target="_blank">
 
-transition:.7s;
+                        <i class="fab fa-instagram"></i>
 
-}
+                        @xynn_fanny
 
-.info-card:hover::before{
+                    </a>
 
-left:100%;
+                </div>
 
-}
+            </div>
 
-.info-card:hover{
+            <!-- Wakil -->
 
-transform:translateY(-10px);
+            <div class="inti-card">
 
-box-shadow:0 20px 40px rgba(0,170,255,.25);
+                <img src="img/nasel.jpeg">
 
-border-color:#3ea6ff;
+                <div class="member-info">
 
-}
+                    <h3>Naselia Destiana Azzahra</h3>
 
-.icon{
+                    <p>Wakil Ketua</p>
+                    <p class="motto">
+                        "Yang telah pergi akan selalu terkenang dan sambutlah yang akan datang."
+                    </p>
 
-width:65px;
+                    <a href="https://instagram.com/nasel.liaa" target="_blank">
 
-height:65px;
+                        <i class="fab fa-instagram"></i>
 
-border-radius:18px;
+                        @nasel.liaa
 
-background:linear-gradient(135deg,#2563eb,#38bdf8);
+                    </a>
 
-display:flex;
+                </div>
 
-justify-content:center;
+            </div>
 
-align-items:center;
+            <!-- Bendahara -->
 
-font-size:28px;
+            <div class="inti-card">
 
-color:white;
+                <img src="img/12.jpeg">
 
-flex-shrink:0;
+                <div class="member-info">
 
-}
+                    <h3>Zaidan Rafael</h3>
 
-.instagram{
+                    <p>Bendahara</p>
+                    <p class="motto">
+                        "Memimpin bukan tentang menjadi yang paling hebat,
+                        tetapi membuat semua orang menjadi lebih hebat."
+                    </p>
 
-background:linear-gradient(
-135deg,
-#f58529,
-#dd2a7b,
-#8134af,
-#515bd4);
+                    <a href="https://instagram.com/yuttttt1_" target="_blank">
 
-}
+                        <i class="fab fa-instagram"></i>
 
-.info-card h3{
+                        @bendahara
 
-color:white;
+                    </a>
 
-margin-bottom:10px;
+                </div>
 
-font-size:24px;
+            </div>
 
-}
+        </div>
+        <div class="org-line"></div>
 
-.info-card p{
 
-color:#cfd8e3;
+    <!-- ========================= -->
+    <!-- PERIODE 2026 / 2027 -->
+    <!-- ========================= -->
 
-line-height:1.7;
+    <div class="periode">
 
-}
+        <h2 class="periode-title">
+            PERIODE 2026 / 2027
+        </h2>
 
-.info-card a{
+        <!-- Ketua -->
 
-display:block;
+        <div class="ketua-box">
 
-color:#8fd3ff;
+            <div class="inti-card">
 
-text-decoration:none;
+                <img src="img/intan.jpeg">
 
-margin:8px 0;
+                <div class="member-info">
 
-transition:.3s;
+                    <h3>Intan Amira Grania</h3>
 
-}
+                    <p>Ketua</p>
+                    <p class="motto">
+                        "Semua ada waktunya."
+                    </p>
 
-.info-card a:hover{
+                    <a href="https://instagram.com/intnnamiraa_" target="_blank">
 
-padding-left:8px;
+                        <i class="fab fa-instagram"></i>
 
-color:white;
+                        @intnnamiraa_
 
-}
+                    </a>
 
-.maps{
+                </div>
 
-margin-top:70px;
+            </div>
 
-border-radius:25px;
+        </div>
 
-overflow:hidden;
+        <!-- Pengurus Inti -->
 
-border:2px solid rgba(255,255,255,.08);
+        <div class="inti">
 
-box-shadow:0 20px 45px rgba(0,0,0,.4);
+            <!-- Sekretaris -->
 
-}
+            <div class="inti-card">
 
-.maps iframe{
+                <img src="img/pearly.jpeg">
 
-width:100%;
+                <div class="member-info">
 
-height:420px;
+                    <h3>Pearly Cardia</h3>
 
-border:0;
+                    <p>Sekretaris</p>
+                    <p class="motto">
+                        " Own it."
+                    </p>
 
-}
+                    <a href="https://instagram.com/prlycrdia_" target="_blank">
 
+                        <i class="fab fa-instagram"></i>
 
-.info-card::after{
+                        @prlycrdia_
 
-content:"";
+                    </a>
 
-position:absolute;
+                </div>
 
-width:180px;
+            </div>
 
-height:180px;
+            <!-- Wakil -->
 
-background:#38bdf8;
+            <div class="inti-card">
 
-filter:blur(120px);
+                <img src="img/ty.jpeg">
 
-opacity:.18;
+                <div class="member-info">
 
-right:-80px;
+                    <h3>Nama Wakil</h3>
 
-top:-80px;
+                    <p>Wakil Ketua</p>
+                    <p class="motto">
+                        "Memimpin bukan tentang menjadi yang paling hebat,
+                        tetapi membuat semua orang menjadi lebih hebat."
+                    </p>
 
-transition:.4s;
+                    <a href="https://instagram.com/yuttttt1_" target="_blank">
 
-}
+                        <i class="fab fa-instagram"></i>
 
-.info-card:hover::after{
+                        @wakil
 
-opacity:.35;
+                    </a>
 
-}
+                </div>
 
-/* ================================= */
-/* FOOTER */
-/* ================================= */
+            </div>
 
-footer{
+            <!-- Bendahara -->
 
-    background:#03050d;
+            <div class="inti-card">
 
-    text-align:center;
+                <img src="img/keisya.jpeg">
 
-    padding:25px;
+                <div class="member-info">
 
-    color:#9fb4d6;
+                    <h3>Nazwa Kesya Safitri</h3>
 
-    border-top:1px solid rgba(255,255,255,.08);
+                    <p>Bendahara</p>
+                    <p class="motto">
+                        "Selalu bersama ocha_mrdana."
+                    </p>
 
-}
+                    <a href="https://instagram.com/yuttttt1_" target="_blank">
 
-/* ================================= */
-/* SCROLLBAR */
-/* ================================= */
+                        <i class="fab fa-instagram"></i>
 
-::-webkit-scrollbar{
+                        @yuttttt1_
 
-    width:8px;
+                    </a>
 
-}
+                </div>
 
-::-webkit-scrollbar-track{
+            </div>
 
-    background:#03050d;
+        </div>
 
-}
+        <h3 class="anggota-title">
+            Anggota
+        </h3>
 
-::-webkit-scrollbar-thumb{
+<!-- ================= SWIPER ================= -->
+        <div class="org-line"></div>
+<div class="swiper anggotaSwiper">
 
-    background:#2c9cff;
+<div class="swiper-wrapper">
 
-    border-radius:50px;
+<!-- Bendahara 2 -->
+<div class="swiper-slide">
 
-}
+<div class="member-card">
 
-::-webkit-scrollbar-thumb:hover{
+<img src="img/lutfia.jpeg">
 
-    background:#56b7ff;
+<div class="member-info">
 
-}
+<h3>Lutvia Harum Dhani</h3>
 
-/* ================================= */
-/* ANIMASI */
-/* ================================= */
+<p>Bendahara 2</p>
+<p class="motto">
+"Jangan takut melangkah, karena setiap perjalanan di mulai dari satu langkah kecil."
+</p>
 
-.member-card,
-.gallery img,
-.hero-image img,
-.tentang-img img{
+<a href="https://instagram.com/_ltviarum" target="_blank">
 
-    animation:fadeUp .8s ease;
+<i class="fab fa-instagram"></i>
 
-}
+@_ltviarum
 
-@keyframes fadeUp{
+</a>
 
-    from{
+</div>
 
-        opacity:0;
+</div>
 
-        transform:translateY(30px);
+</div>
 
-    }
+<!-- Pemateri -->
+<div class="swiper-slide">
 
-    to{
+<div class="member-card">
 
-        opacity:1;
+<img src="img/arin.jpeg">
 
-        transform:translateY(0);
+<div class="member-info">
 
-    }
+<h3>Arinda Kurnia Devy</h3>
 
-}
+<p>Ketua Pemateri</p>
+<p class="motto">
+"Silence, discipline, result."
+</p>
 
-/* ================================= */
-/* RESPONSIVE */
-/* ================================= */
+<a href="https://instagram.com/mooneonxx" target="_blank">
 
-@media(max-width:1000px){
+<i class="fab fa-instagram"></i>
 
-.hero{
+@mooneonxx
 
-flex-direction:column-reverse;
+</a>
 
-text-align:center;
+</div>
 
-padding-top:130px;
+</div>
 
-}
+</div>
 
-.hero-text h1{
+<!-- Pemateri -->
+<div class="swiper-slide">
 
-font-size:48px;
+<div class="member-card">
 
-}
+<img src="img/.jpeg">
 
-.tentang-content{
+<div class="member-info">
 
-flex-direction:column;
+<h3>b</h3>
 
-}
+<p>Pemateri</p>
+<p class="motto">
+"b."
+</p>
 
-}
+<a href="https://instagram.com/acara" target="_blank">
 
-@media(max-width:768px){
+<i class="fab fa-instagram"></i>
 
-.navbar ul{
+@acara
 
-display:none;
+</a>
 
-}
+</div>
 
-.menu{
+</div>
 
-display:block;
+</div>
 
-}
 
-.hero-text h1{
+<!-- Pemateri -->
+<div class="swiper-slide">
 
-font-size:38px;
+<div class="member-card">
 
-}
+<img src="img/.jpeg">
 
-.title h2{
+<div class="member-info">
 
-font-size:32px;
+<h3>b</h3>
 
-}
+<p>Pemateri</p>
+<p class="motto">
+"b."
+</p>
 
-.member-card img{
+<a href="https://instagram.com/hanundsmita_" target="_blank">
 
-height:320px;
+<i class="fab fa-instagram"></i>
 
-}
+@hanundsmita_
 
-.contact-box{
+</a>
 
-padding:25px;
+</div>
 
-}
+</div>
 
-}
+</div>
 
-@media(max-width:500px){
+<!-- Dokumentasi -->
+<div class="swiper-slide">
 
-.hero-text h1{
+<div class="member-card">
 
-font-size:30px;
+<img src="img/hanun.jpeg">
 
-}
+<div class="member-info">
 
-.hero-text p{
+<h3>Hanun Desmita Narez</h3>
 
-font-size:16px;
+<p> Ketua Dokumentasi</p>
+<p class="motto">
+"Become the person you promised yourself to be."
+</p>
 
-line-height:28px;
+<a href="https://instagram.com/hanundsmita_" target="_blank">
 
-}
+<i class="fab fa-instagram"></i>
 
-section{
+@hanundsmita_
 
-padding:70px 20px;
+</a>
 
-}
+</div>
 
-.member-card img{
+</div>
 
-height:280px;
+</div>
 
-}
+<!-- Dokumentasi -->
+<div class="swiper-slide">
 
-}
+<div class="member-card">
 
-/* ========================= */
-/* PENGURUS INTI */
-/* ========================= */
+<img src="img/tu.jpeg">
 
-.periode{
-    margin-bottom:120px;
-}
+<div class="member-info">
 
-.periode-title{
-    text-align:center;
-    font-size:38px;
-    color:#ffffff;
-    margin-bottom:50px;
-}
+<h3>Nama Acara</h3>
 
-.ketua-box{
-    display:flex;
-    justify-content:center;
-    margin-bottom:45px;
-}
+<p>Dokumentasi</p>
+<p class="motto">
+"Memimpin bukan tentang menjadi yang paling hebat,
+tetapi membuat semua orang menjadi lebih hebat."
+</p>
 
-.inti{
-    display:flex;
-    justify-content:center;
-    gap:35px;
-    flex-wrap:wrap;
-    margin-bottom:45px;
-}
+<a href="https://instagram.com/acara" target="_blank">
 
-.inti-card{
-    width:410px;          /* samakan dengan card anggota biasa */
-    background:#181b29;
-    border-radius:20px;
-    overflow:hidden;
-    transition:.3s;
-}
+<i class="fab fa-instagram"></i>
 
-.inti-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 30px rgba(73,182,255,.35);
-}
+@acara
 
-.inti-card img{
-    width:100%;
-    height:380px;         /* samakan dengan anggota biasa */
-    object-fit:cover;
-    display:block;
-}
+</a>
 
-.inti-card .member-info{
-    padding:20px;
-}
+</div>
 
-.anggota-title{
-    text-align:center;
-    font-size:30px;
-    margin:40px 0 25px;
-    color:#49b6ff;
-}
+</div>
 
+</div>
 
+<!-- Dokumentasi -->
+<div class="swiper-slide">
 
-.org-line{
-    width:100%;
-    max-width:1300px;
-    height:4px;
-    margin:45px auto;
-    position:relative;
-    border-radius:30px;
-    overflow:hidden;
+<div class="member-card">
 
-    background:linear-gradient(90deg,
-    rgba(0,200,255,.1),
-    #34d8ff,
-    #8ce8ff,
-    #34d8ff,
-    rgba(0,200,255,.1));
+<img src="img/tt.jpeg">
 
-    box-shadow:
-    0 0 8px #34d8ff,
-    0 0 20px #34d8ff,
-    0 0 35px rgba(52,216,255,.7);
-}
+<div class="member-info">
 
-.org-line::before{
+<h3>Nama Dokumentasi</h3>
 
-    content:'';
-    position:absolute;
-    left:-120px;
-    top:0;
+<p>Dokumentasi</p>
+<p class="motto">
+"Memimpin bukan tentang menjadi yang paling hebat,
+tetapi membuat semua orang menjadi lebih hebat."
+</p>
 
-    width:120px;
-    height:100%;
+<a href="https://instagram.com/dokumentasi" target="_blank">
 
-    background:linear-gradient(90deg,
-    transparent,
-    rgba(255,255,255,.95),
-    transparent);
+<i class="fab fa-instagram"></i>
 
-    animation:flow 3s linear infinite;
-}
+@dokumentasi
 
-@keyframes flow{
+</a>
 
-0%{
-left:-120px;
-}
+</div>
 
-100%{
-left:100%;
-}
+</div>
 
-}
+</div>
 
-.org-line::after{
+<!-- Komisi Kedisiplinan -->
+<div class="swiper-slide">
 
-content:'';
+<div class="member-card">
 
-position:absolute;
+<img src="img/salita.jpeg">
 
-left:50%;
-top:50%;
+<div class="member-info">
 
-transform:translate(-50%,-50%);
+<h3>Shalita Elza Reina</h3>
 
-width:18px;
-height:18px;
+<p>Ketua Komisi Kedisiplinan</p>
+<p class="motto">
+"Create your own sunshine."
+</p>
 
-border-radius:50%;
+<a href="https://instagram.com/shalitaelza_" target="_blank">
 
-background:white;
+<i class="fab fa-instagram"></i>
 
-box-shadow:
+@shalitaelza_
 
-0 0 10px white,
+</a>
 
-0 0 25px #00cfff,
+</div>
 
-0 0 45px #00cfff;
+</div>
 
-}
+</div>
 
-.org-line-vertical{
+<!-- Humas -->
+<div class="swiper-slide">
 
-width:4px;
-height:60px;
+<div class="member-card">
 
-margin:auto;
+<img src="img/anggota5.jpg">
 
-background:#3ad9ff;
+<div class="member-info">
 
-box-shadow:
+<h3>Nama Humas</h3>
 
-0 0 15px #3ad9ff,
-0 0 30px #3ad9ff;
+<p>Koordinator Humas</p>
+<p class="motto">
+"Memimpin bukan tentang menjadi yang paling hebat,
+tetapi membuat semua orang menjadi lebih hebat."
+</p>
 
-position:relative;
+<a href="https://instagram.com/humas" target="_blank">
 
-}
+<i class="fab fa-instagram"></i>
 
-.card{
+@humas
 
-transition:.45s;
+</a>
 
-}
+</div>
 
-.card:hover{
+</div>
 
-transform:translateY(-12px) scale(1.04);
+</div>
 
-border:1px solid #42d4ff;
+<!-- Acara -->
+<div class="swiper-slide">
 
-box-shadow:
+<div class="member-card">
 
-0 0 20px rgba(0,191,255,.5),
+<img src="img/anggota6.jpg">
 
-0 0 50px rgba(0,191,255,.35);
+<div class="member-info">
 
-}
+<h3>Nama Acara</h3>
 
-.card img{
+<p>Koordinator Acara</p>
+<p class="motto">
+"Memimpin bukan tentang menjadi yang paling hebat,
+tetapi membuat semua orang menjadi lebih hebat."
+</p>
 
-transition:.5s;
+<a href="https://instagram.com/acara" target="_blank">
 
-}
+<i class="fab fa-instagram"></i>
 
-.card:hover img{
+@acara
 
-transform:scale(1.08);
+</a>
 
-filter:brightness(1.15);
+</div>
 
-}
+</div>
 
-.card h3{
+</div>
 
-transition:.3s;
+<!-- Dokumentasi -->
+<div class="swiper-slide">
 
-}
+<div class="member-card">
 
-.card:hover h3{
+<img src="img/anggota7.jpg">
 
-color:#4ecfff;
+<div class="member-info">
 
-text-shadow:
+<h3>Nama Dokumentasi</h3>
 
-0 0 8px #4ecfff,
+<p>Dokumentasi</p>
+<p class="motto">
+"Memimpin bukan tentang menjadi yang paling hebat,
+tetapi membuat semua orang menjadi lebih hebat."
+</p>
 
-0 0 20px #4ecfff;
+<a href="https://instagram.com/dokumentasi" target="_blank">
 
-}
+<i class="fab fa-instagram"></i>
 
-@keyframes float{
+@dokumentasi
 
-0%{
-transform:translateY(0);
-}
+</a>
 
-50%{
-transform:translateY(-18px);
-}
+</div>
 
-100%{
-transform:translateY(0);
-}
+</div>
 
-}
+</div>
 
-@keyframes floatLogo{
+<!-- Perlengkapan -->
+<div class="swiper-slide">
 
-0%{
+<div class="member-card">
 
-transform:translateY(0px);
+<img src="img/anggota8.jpg">
 
-}
+<div class="member-info">
 
-50%{
+<h3>Nama Perlengkapan</h3>
 
-transform:translateY(-20px);
+<p>Perlengkapan</p>
+<p class="motto">
+"Memimpin bukan tentang menjadi yang paling hebat,
+tetapi membuat semua orang menjadi lebih hebat."
+</p>
 
-}
+<a href="https://instagram.com/perlengkapan" target="_blank">
 
-100%{
+<i class="fab fa-instagram"></i>
 
-transform:translateY(0px);
+@perlengkapan
 
-}
+</a>
 
-}
+</div>
 
-@keyframes spin{
+</div>
 
-from{
+</div>
 
-transform:rotate(0deg);
 
-}
 
-to{
 
-transform:rotate(360deg);
+</div>   <!-- swiper-wrapper -->
 
-}
+<div class="swiper-button-next"></div>
 
-}
+<div class="swiper-button-prev"></div>
 
-@keyframes floatLogo{
-    0%,100%{
-        transform:translateY(0);
-    }
+<div class="swiper-pagination"></div>
 
-    50%{
-        transform:translateY(-10px);
-    }
-}
+</div>   <!-- swiper -->
+</div> <!-- periode -->
+</section>
 
-.title-line{
-    width:120px;
-    height:4px;
-    margin:18px auto 30px;
-    border-radius:10px;
-    background:linear-gradient(90deg,#1d9bf0,#64b5ff,#1d9bf0);
-}
 
-.org-stats{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    margin:45px 0;
-    flex-wrap:wrap;
-}
+<section class="galeri" id="galeri">
 
-.stat-box{
-    width:180px;
-    padding:22px;
-    background:#0f172a;
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:18px;
-    transition:.3s;
-}
+<h2>Galeri Kegiatan</h2>
 
-.stat-box:hover{
-    transform:translateY(-8px);
-    border-color:#2fa7ff;
-}
+<p>Dokumentasi berbagai kegiatan Metro Crew.</p>
 
-.stat-box h3{
-    font-size:34px;
-    color:#4cb8ff;
-    margin-bottom:8px;
-}
+<div class="gallery-grid">
 
-.stat-box span{
-    color:#cfd8e3;
-}
+<div class="gallery-item">
+<img src="img/1.jpeg">
+</div>
 
-.periode-text{
-    text-align:center;
-    color:#9fb8d4;
-    margin-top:20px;
-    margin-bottom:10px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    font-size:14px;
-}
+<div class="gallery-item">
+<img src="img/2.jpeg">
+</div>
 
-.motto{
-    margin:18px 0;
-    font-size:14px;
-    line-height:1.7;
-    color:#b7c7db;
-    font-style:italic;
-    border-left:3px solid #4cb8ff;
-    padding-left:15px;
-}
+<div class="gallery-item">
+<img src="img/3.jpeg">
+</div>
 
-.contact-box a{
-    color: #fff;
-    text-decoration: none;
-    transition: .3s;
-}
+<div class="gallery-item">
+<img src="img/4.jpeg">
+</div>
 
-.contact-box a:hover{
-    color: #6872fd;
-}
+<div class="gallery-item">
+<img src="img/5.jpeg">
+</div>
 
-.contact-box a i{
-    margin-right: 8px;
-}
+<div class="gallery-item">
+<img src="img/6.jpeg">
+</div>
 
+<div class="gallery-item">
+<img src="img/7.jpeg">
+</div>
 
-.popup{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.92);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
-}
+<div class="gallery-item">
+<img src="img/8.jpeg">
+</div>
 
-.popup img{
-    max-width:90%;
-    max-height:90%;
-    border-radius:18px;
-}
+</div>
 
-.popup span{
-    position:absolute;
-    top:25px;
-    right:40px;
-    color:white;
-    font-size:45px;
-    cursor:pointer;
-}
+</section>
 
-/* ============================
-   MOBILE RESPONSIVE
-=============================*/
-@media screen and (max-width:768px){
+<section class="kontak" id="kontak">
 
-body{
-    overflow-x:hidden;
-}
+<h2>Hubungi Kami</h2>
 
-/* Navbar */
+<p>
+Kami siap menerima kritik, saran, maupun pertanyaan mengenai
+Metro Crew.
+</p>
 
-.navbar{
-    padding:15px;
-}
+<div class="contact-grid">
 
-.logo h2{
-    font-size:24px;
-}
+<div class="info-card">
 
-.navbar ul{
-    display:none;
-}
+<div class="icon">
+<i class="fas fa-map-marker-alt"></i>
+</div>
 
-.menu{
-    display:block;
-}
+<div>
 
-/* Hero */
+<h3>Lokasi</h3>
 
-.hero{
-    flex-direction:column-reverse;
-    gap:40px;
-    text-align:center;
-}
+<p>SMK Muhammadiyah 3 Metro</p>
 
-.hero-image img{
-    width:220px;
-}
+</div>
 
-.hero-text h1{
-    font-size:38px;
-}
+</div>
 
-.hero-text p{
-    font-size:16px;
-    line-height:28px;
-}
+<div class="info-card">
 
-/* Pengurus */
+<div class="icon">
+<i class="fas fa-phone"></i>
+</div>
 
-.inti{
-    flex-direction:column;
-    align-items:center;
-}
+<div>
 
-.inti-card{
-    width:100%;
-    max-width:340px;
-}
+<h3>Telepon</h3>
 
-.member-card{
-    width:100%;
-}
+<p>+62 812-7222-102</p>
 
-.member-card img,
-.inti-card img{
-    height:320px;
-}
+</div>
 
-/* Garis */
+</div>
 
-.org-line{
-    width:100%;
-}
 
-/* Gallery */
+<div class="info-card">
 
-.gallery-grid{
-    grid-template-columns:1fr;
-}
+<div class="icon instagram">
+<i class="fab fa-instagram"></i>
+</div>
 
-/* Contact */
+<div>
 
-.contact-grid{
-    grid-template-columns:1fr;
-}
+<h3>Instagram</h3>
 
-.info-card{
-    width:100%;
-}
+<a href="https://instagram.com/official_smkmuh3metro" target="_blank">
+@official_smkmuh3metro
+</a>
 
-.maps iframe{
-    height:260px;
-}
+<a href="https://instagram.com/tkj.m3m" target="_blank">
+@tkj.m3m
+</a>
 
-/* Judul */
+<a href="https://instagram.com/squadmetrocrewm3m" target="_blank">
+@squadmetrocrewm3m
+</a>
 
-.section-title h2,
-.title h2,
-.periode-title{
-    font-size:30px;
-}
+</div>
 
-}
+</div>
 
-/* ================================= */
-/* RESPONSIVE MOBILE (MAX 768px) */
-/* ================================= */
+</div>
 
-@media (max-width:768px){
+<div class="maps">
 
-    html,
-    body{
-        overflow-x:hidden;
-    }
+<iframe
+src="https://www.google.com/maps?q=SMK+Muhammadiyah+3+Metro&output=embed"
+loading="lazy">
+</iframe>
 
-    section{
-        padding:60px 5%; /* Mengurangi padding agar konten lebih leluasa di layar kecil */
-    }
+</div>
 
-    /* Navbar */
-    .navbar{
-        width:100%;
-        padding:15px 5%;
-    }
 
-    .logo h2{
-        font-size:24px;
-    }
+<footer>
+    <p>© 2026 Website Komunitas</p>
+</footer>
+</section>
 
-    .navbar ul{
-        display:none;
-    }
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    .menu{
-        display:block;
-    }
+<script src="script.js"></script>
 
-    /* Hero Section */
-    .hero{
-        width:100%;
-        flex-direction:column-reverse;
-        gap:20px;
-        text-align:center;
-        padding-top:110px;
-        padding-bottom:50px;
-    }
-
-    .hero-text,
-    .hero-image{
-        width:100%;
-    }
-
-    .hero-image img{
-        width:80%; /* Menggunakan persentase agar gambar responsif mengikuti layar */
-        max-width:280px;
-        margin:0 auto 20px;
-    }
-
-    .hero-text h1{
-        font-size:36px;
-        line-height:1.2;
-        letter-spacing:-1px;
-    }
-
-    .hero-text p{
-        font-size:15px;
-        line-height:1.6;
-        margin-bottom:30px;
-    }
-
-    /* Typography Umum */
-    .section-title h2,
-    .title h2,
-    .kontak h2 {
-        font-size: 32px;
-    }
-
-    .section-title p,
-    .title p,
-    .kontak > p {
-        font-size: 15px;
-    }
-
-    /* Section Tentang (Profil, Visi, Misi) */
-    .about {
-        padding: 80px 5%;
-    }
-    
-    .about-container{
-        grid-template-columns:1fr;
-        gap:20px;
-    }
-
-    .about-card {
-        padding: 20px; /* Padding dikurangi agar teks tidak terhimpit seperti di screenshot */
-    }
-
-    .about-card h3 {
-        font-size: 26px;
-        margin-bottom: 12px;
-    }
-
-    .about-card p, .about-card li {
-        font-size: 15px;
-        line-height: 1.6;
-    }
-
-    /* Section Anggota & Pengurus Inti */
-    .inti{
-        flex-direction:column;
-        align-items: center;
-        gap: 25px;
-    }
-
-    .inti-card,
-    .member-card{
-        width:100%;
-        max-width:320px;
-        margin:auto;
-    }
-
-    /* Menyesuaikan tinggi gambar agar tidak terlihat memanjang di HP */
-    .inti-card img,
-    .member-card img {
-        height: 300px;
-    }
-
-    /* Galeri */
-    .gallery-grid{
-        grid-template-columns:1fr;
-    }
-
-    /* Section Kontak */
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
-
-    .info-card{
-        width:100%;
-        padding:20px; /* Padding dikurangi agar lebih pas */
-    }
-
-    .maps iframe{
-        height:250px; /* Tinggi map disesuaikan */
-    }
-
-    /* Garis Dekorasi (Disembunyikan di HP karena sering memicu overflow) */
-    .org-line{
-        display: none; 
-    }
-    
-    .org-stats {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .stat-box {
-        width: 100%;
-        max-width: 250px;
-    }
-}
+</body>
+</html>
