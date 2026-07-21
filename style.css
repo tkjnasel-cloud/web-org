@@ -283,7 +283,8 @@ section{
     content:"";
     position:absolute;
     width:450px;
-    height:450px;
+    min-height: 360px;
+    height: auto;
     background:#1ea5ff;
     filter:blur(180px);
     opacity:.12;
@@ -514,27 +515,22 @@ section{
 /* SWIPER */
 /* ============================= */
 
-.swiper-button-next,
-.swiper-button-prev{
-
-    color:#4cb8ff !important;
-
+/* Dilebarkan ke 980px agar 3 card bisa muat penuh dari kiri ke kanan */
+.swiper, .anggotaSwiper {
+  width: 980px !important;  
+  height: 480px !important;
 }
 
-.swiper-pagination-bullet{
-
-    background:#ffffff !important;
-
-    opacity:.5;
-
+/* Biarkan lebar tiap slide diatur otomatis oleh JS Swiper */
+.swiper-slide {
+  height: 100% !important;
 }
 
-.swiper-pagination-bullet-active{
-
-    background:#4cb8ff !important;
-
-    opacity:1;
-
+/* Ukuran foto di dalam card */
+.swiper-slide img {
+  width: 100%;
+  height: 250px !important;
+  object-fit: cover;
 }
 /* ================================= */
 /* GALERI */
@@ -1349,12 +1345,26 @@ body{
         margin-bottom:10px;
     }
 
-    .about-container{
+    .about-card{
+    min-height: 400px;
+    padding: 20px;
+}
+
+.about-container{
     display:flex !important;
     flex-wrap:nowrap !important;
-    justify-content:center !important;
     gap:20px;
-    overflow:visible !important;
+
+    justify-content:flex-start !important;
+    overflow-x:auto !important;
+    overflow-y:hidden;
+    padding:0 30px;
+    scroll-snap-type:x mandatory;
+}
+
+.about-card{
+    flex:0 0 380px;
+    scroll-snap-align:center;
 }
 
 .inti{
@@ -1386,6 +1396,29 @@ body{
 .member-info p{
     font-size:13px;
     line-height:1.5;
+}
+
+.swiper, .anggotaSwiper {
+  width: 100% !important;
+  max-width: 100% !important; /* Mencegah swiper melebar keluar kontainer */
+  height: 520px !important;
+  margin: 0 auto !important;  /* Memaksa posisi persis di tengah */
+  padding-left: 0 !important; /* Menghilangkan offset margin/padding kiri-kanan */
+  padding-right: 0 !important;
+}
+
+.swiper-slide {
+  height: 100% !important;
+}
+
+.swiper-slide .member-card {
+  height: 100% !important;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 280px !important;
+  object-fit: cover;
 }
 
 }
