@@ -1317,19 +1317,46 @@ transform:rotate(360deg);
 }
 
 @media (max-width:768px){
-    /* 1. Reset supaya tidak ada overflow */
-    html, body {
-        width: 100% !important;
-        overflow-x: hidden !important;
-        margin: 0 !important;
-        padding: 0 !important;
+
+    /* Reset */
+    html, body{
+        width:100% !important;
+        overflow-x:hidden !important;
+        margin:0 !important;
+        padding:0 !important;
     }
 
-    /* 2. Scale yang lebih kecil agar pas di layar 377px */
-    body {
-        transform: scale(0.35) !important; /* Dikecilkan lagi jadi 0.35 */
-        transform-origin: top center !important;
-        width: 285% !important; /* Disesuaikan dengan skala 0.35 (1/0.35 = 2.85) */
-        margin-left: -92.5% !important; /* Menarik konten tepat ke tengah */
+    /* Scale seluruh website */
+body{
+    transform: scale(0.35) !important;
+    transform-origin: top center !important;
+    width: 330% !important;
+    margin-left: -115% !important;
+}
+
+.about-card{
+    width:380px !important;
+    min-width:380px !important;
+    min-height:260px !important;
+}
+
+    /* Tulisan Misi */
+    .about-card ul{
+        padding-left:22px;
     }
+
+    .about-card li{
+        font-size:17px;
+        line-height:1.8;
+        margin-bottom:10px;
+    }
+
+    .about-container{
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    justify-content:center !important;
+    gap:20px;
+    overflow:visible !important;
+}
+
 }
