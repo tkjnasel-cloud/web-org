@@ -4,9 +4,9 @@
 
 var swiper = new Swiper(".anggotaSwiper", {
 
-    slidesPerView:1,
+    slidesPerView:3,
 
-    spaceBetween:25,
+    spaceBetween:20,
 
     loop:true,
 
@@ -36,21 +36,8 @@ var swiper = new Swiper(".anggotaSwiper", {
 
     },
 
-    breakpoints:{
 
-        640:{
-
-            slidesPerView:2,
-
-        },
-
-        1024:{
-
-            slidesPerView:3,
-
-        }
-
-    }
+    
 
 });
 
